@@ -1,0 +1,75 @@
+// PROBLEM
+// determine the sentence with the most words
+// count the number of words
+// output the sentence with the count of the number of words
+
+// sentences can end in . ! or ?
+// sentences always begin with a word character
+// words
+  // any sequence of characters that are not spaces or sentence ending characters
+
+// EXAMPLES
+// 'Four score and seven years ago our fathers brought forth' +
+  // ' on this continent a new nation, conceived in liberty, and' +
+  // ' dedicated to the proposition that all men are created' +
+  // ' equal.'
+  //  30 words
+
+// It is rather for' +
+// ' us to be here dedicated to the great task remaining' +
+// ' before us -- that from these honored dead we take' +
+// ' increased devotion to that cause for which they gave' +
+// ' the last full measure of devotion -- that we here highly' +
+// ' resolve that these dead shall not have died in vain' +
+// ' -- that this nation, under God, shall have a new birth' +
+// ' of freedom -- and that government of the people, by' +
+// ' the people, for the people, shall not perish from the' +
+// ' earth.'
+// 86 words ,  '--` counts as a word
+
+// DATA
+// in: text
+// out: count as number
+// sentence as string
+// split text into sentences array by spliting on .!?  <<  need to escape
+// split sentences into words array by splitting on spaces
+
+// ALGORITHYM
+// sentences - split text by splitting on /[]\.!\?]/
+// set count to 0
+// set sentence index to 0
+// iterate through sentences with index
+  // words - split sentence by splitting on / /
+  // set current count to length of words
+  // if current count is greater then count
+    // set count to current count
+    // set sentence index to current index
+// output
+// access the longest sentence using the sentence index
+// empty line
+// The longest sentence has {count} words.
+
+// ALGORITHYM
+// sentences - split text by splitting on /[\.!\?] */
+// filter out sentences that don't start with a word character
+// set count to 0
+// set sentence index to 0
+// iterate through sentences with index
+  // return if sentence does not start with a word character
+  // words - split sentence by splitting on / /
+  // set current count to length of words
+  // if current count is greater then count
+    // set count to current count
+    // set sentence index to current index
+// output
+// access the longest sentence using the sentence index
+// empty line
+// The longest sentence has {count} words.
+
+///////////////
+// previous solution doesn't work because spliting on punctuation loses the punctuation.
+// modifying spliting on punctuation and space to matching
+// Use match to get all sentences
+  // \b[^\.!\?]+[\.!\?]
+
+///////////////
