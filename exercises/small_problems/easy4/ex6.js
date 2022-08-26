@@ -8,7 +8,6 @@ function showMultiplicativeAverage(array) {
   let total = array.reduce( (previousValue, currentValue) => previousValue *= currentValue);
   let average = total/array.length;
   return average.toFixed(3);
-  // return Number.toFixed(average, 3);
 }
 
 console.log(showMultiplicativeAverage([3, 5])                === "7.500");     // "7.500"
