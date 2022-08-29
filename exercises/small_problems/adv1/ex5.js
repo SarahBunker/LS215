@@ -48,7 +48,7 @@ function merge(input1, input2) {
   let array1 = input1.splice(0);
   let array2 = input2.splice(0);
   let result = [];
-  
+
   while (array1.length > 0 && array2.length > 0) {
     result.push( (array1[0] < array2[0]) ? array1.shift() : array2.shift() );
   }

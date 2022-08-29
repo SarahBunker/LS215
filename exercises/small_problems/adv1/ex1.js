@@ -50,8 +50,8 @@ function addRandomWord(wordtype, array, template) {
 }
 
 function madlibs(template) {
-  const ADJECTIVE_LIST = ['quick', 'lazy', 'sleepy', 'noisy', 'hungry'];
-  const NOUN_LIST = ['fox', 'dog', 'head', 'leg', 'tail', 'cat'];
+  const ADJECTIVE_LIST = ['quick', 'lazy', 'sleepy', 'noisy', 'hungry', 'able', 'bad'];
+  const NOUN_LIST = ['fox', 'dog', 'head', 'leg', 'tail', 'cat', ''];
   const VERB_LIST = ['jumps', 'lifts', 'bites', 'licks', 'pats'];
   const ADVERB_LIST  = ['easily', 'lazily', 'noisily', 'excitedly'];
   template = addRandomWord('adjective', ADJECTIVE_LIST , template);
