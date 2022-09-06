@@ -93,8 +93,6 @@ function newFirstLastRow(row) {
   return newRow;
 }
 
-// console.log(newFirstLastRow(['*', ' ', ' ', '*', ' ', ' ', '*']));
-
 function addStarLevel(nestedStarArray) {
   let newFirstRow = newFirstLastRow(nestedStarArray[0]);
   let newLastRow = newFirstLastRow(nestedStarArray[nestedStarArray.length - 1]);
