@@ -131,19 +131,18 @@ function checkDigit(checkSum) {
 
 function addCheckDigit(string) {
   let copy = string.slice(0);
-  if (validLuhn(copy)) return copy;
+  if (validLuhn(copy)) return string;
   let check_sum = checkSum(copy + '0');
   let check_digit = checkDigit(check_sum);
-  // console.log(check_sum, check_digit);
   return string + check_digit;
 }
 
-console.log('Part Two')
-console.log(validLuhn('2323 2005 7766 3554'))
-console.log(addCheckDigit("2323 2005 7766 355") === '2323 2005 7766 3554')
+console.log('Part Two');
+console.log(validLuhn('2323 2005 7766 3554'));
+console.log(addCheckDigit("2323 2005 7766 355") === '2323 2005 7766 3554');
 console.log(validLuhn('8763'))
 console.log(addCheckDigit("876") === '8763')
-// console.log(validLuhn('2323 2005 7766 3553'))
-// console.log(addCheckDigit("2323 2005 7766 3553") === '11114')
+console.log(validLuhn('2323 2005 7766 35535'))
+console.log(addCheckDigit("2323 2005 7766 3553") === '2323 2005 7766 35535')
 // console.log(validLuhn('11114'))
 // console.log(addCheckDigit("1111") === '11114')

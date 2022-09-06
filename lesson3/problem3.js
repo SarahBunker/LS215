@@ -54,17 +54,17 @@ const REVERSE_SPELL  = { o: 'b', k: 'x', q: 'd', p: 'c', a: 'n',
                         i: 'v', y: 'l', m: 'z'};
 
 function isBlockWord(word) {
-  let lowercase = word.toLowerCase()
-  lowercase .split('')
-            .forEach( (char, index) => {
-              let previousLetters = lowercase.slice(0, index);
-              if (previousLetters.includes(char)) return false;
-              let letterPair = SPELLING_BLOCK[char] || REVERSE_SPELL[char];
-              if (previousLetters.includes(letterPair)) return false;
-            });
+  let lowercase = word.toLowerCase().split('')
+  for (let i = 0; i < word.length; i ++) {
+    let char = lowercase[i]
+    let previousLetters = lowercase.slice(0, i);
+    if (previousLetters.includes(char)) return false;
+    let letterPair = SPELLING_BLOCK[char] || REVERSE_SPELL[char];
+    if (previousLetters.includes(letterPair)) return false;
+  }
   return true;
 }
 
 console.log(isBlockWord('BATCH') === true );      // true
-console.log(isBlockWord('BUTCH') === true );      // false
+console.log(isBlockWord('BUTCH') === false );      // false
 console.log(isBlockWord('jest')  === true );       // true

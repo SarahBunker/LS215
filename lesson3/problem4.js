@@ -111,3 +111,5 @@ function longHandRange(shorthand) {
 console.log(longHandRange("104-2"               )); //--> 104, 105, ... 112
 console.log(longHandRange("104-02"              )); //--> 104, 105, ... 202
 // console.log(longHandRange("545, 64:11"          )); //--> 545, 564, 565, .. 611
+
+/// Need to add significant digits, not just 10
