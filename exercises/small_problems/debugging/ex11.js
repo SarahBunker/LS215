@@ -31,7 +31,7 @@ function pomodoro() {
 
   console.log('Rest for ' + rest + ' minutes.');
 
-  minutes = 0;
+  var minutes = 0;
 
   pomodoro();
 }
